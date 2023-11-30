@@ -78,16 +78,11 @@ namespace TaskPronia.Areas.Manage.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
-        public IActionResult Delete(int id)
+       
+        public IActionResult Delete(int  id)
         {
             Color color = _context.Colors.FirstOrDefault(x => x.Id == id);
             if (color == null) return NotFound();
-            return View(color);
-        }
-        [HttpPost]
-        public IActionResult Delete(Color color)
-        {
-
             _context.Colors .Remove(color);
             _context.SaveChanges();
             return RedirectToAction("Index");

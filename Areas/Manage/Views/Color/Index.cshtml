@@ -2,6 +2,9 @@
 @{
     int count = 0;
 }
+@section csss{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.1/sweetalert2.min.css" />
+}
 <div class="container-fluid d-flex justify-content-between">
     <div>Manage/Admin Page</div>
     <a asp-action="create" asp-controller="color" class="btn btn-primary">Create color </a>
@@ -29,8 +32,8 @@
                    
                     
                     <td style="max-width:200px">
-                        <a asp-action="update" style="width:35%" asp-controller="color" asp-route-id="@color.Id" class="btn btn-success">Update</a>
-                        <a asp-action="delete" style="width:35%" asp-controller="color" asp-route-id="@color.Id" class="btn btn-danger">Delete</a>
+                        <a asp-action="update" style="width:35%" asp-controller="color" asp-route-id="@color.Id" class="  btn btn-success">Update</a>
+                        <a asp-action="delete" style="width:35%" asp-controller="color" asp-route-id="@color.Id" class=" btn-delete-slide btn btn-danger">Delete</a>
 
                     </td>
 
@@ -40,3 +43,4 @@
         </tbody>
     </table>
 </div>
+<script src="~/assets/js/sweet.js"></script>

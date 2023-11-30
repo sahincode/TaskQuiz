@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\II novbe\\Desktop\\TaskPronia\\TaskPronia.csproj": {}
+    "C:\\Users\\Shahin\\OneDrive\\Desktop\\CodeCourseProjectAndTAsk\\TaskPronia\\TaskPronia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\II novbe\\Desktop\\TaskPronia\\TaskPronia.csproj": {
+    "C:\\Users\\Shahin\\OneDrive\\Desktop\\CodeCourseProjectAndTAsk\\TaskPronia\\TaskPronia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\TaskPronia\\TaskPronia.csproj",
+        "projectUniqueName": "C:\\Users\\Shahin\\OneDrive\\Desktop\\CodeCourseProjectAndTAsk\\TaskPronia\\TaskPronia.csproj",
         "projectName": "TaskPronia",
-        "projectPath": "C:\\Users\\II novbe\\Desktop\\TaskPronia\\TaskPronia.csproj",
-        "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\II novbe\\Desktop\\TaskPronia\\obj\\",
+        "projectPath": "C:\\Users\\Shahin\\OneDrive\\Desktop\\CodeCourseProjectAndTAsk\\TaskPronia\\TaskPronia.csproj",
+        "packagesPath": "C:\\Users\\Shahin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Shahin\\OneDrive\\Desktop\\CodeCourseProjectAndTAsk\\TaskPronia\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Shahin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,6 +54,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.25, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
@@ -78,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

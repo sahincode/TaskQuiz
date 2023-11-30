@@ -84,16 +84,12 @@ namespace TaskPronia.Areas.Manage.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+        
         public IActionResult Delete(int id)
         {
+
             Category categorie = _context.Categories.FirstOrDefault(x => x.Id == id);
             if (categorie == null) return NotFound();
-            return View(categorie);
-        }
-        [HttpPost]
-        public IActionResult Delete(Category categorie)
-        {
-
             _context.Categories.Remove(categorie);
             _context.SaveChanges();
             return RedirectToAction("Index");
