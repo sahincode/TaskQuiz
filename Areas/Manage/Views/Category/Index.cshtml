@@ -1,0 +1,48 @@
+﻿@model List<Category>
+@{
+    int count = 0;
+}
+@section csss{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.1/sweetalert2.min.css" />
+}
+<div class="container-fluid d-flex justify-content-between">
+    <div>Manage/Admin Page</div>
+    <a asp-action="create" asp-controller="category" class="btn btn-primary">Create category </a>
+
+</div>
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">NO</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].Name)</th>
+                
+                <th scope="col">Controls</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+
+                count++;
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@Html.DisplayFor(a => category.Name)</td>
+                   
+                    
+                    <td style="max-width:200px">
+                        <a asp-action="update" style="width:35%" asp-controller="category" asp-route-id="@category.Id" class="btn btn-success">Update</a>
+                        <a asp-action="delete" style="width:35%" asp-controller="category" asp-route-id="@category.Id" class="btn btn-danger">Delete</a>
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js
+"></script>

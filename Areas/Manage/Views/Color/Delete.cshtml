@@ -1,0 +1,18 @@
+﻿@model Color
+<form method="post" >
+    <div class="card">
+        <div class="alert alert-danger" role="alert">
+            Are you sure for delete following pustok Color ?
+            <button type="submit" class="btn btn-primary">Yes</button>
+            <a asp-action="Index" asp-controller="genre" class="btn btn-primary">No</a>
+        </div>
+        <div class="card-body">
+            
+            <h5 class="card-title">@Model.Name</h5>
+          
+            
+           
+
+        </div>
+    </div>
+</form>

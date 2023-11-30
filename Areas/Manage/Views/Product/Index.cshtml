@@ -1,0 +1,63 @@
+﻿@model List<Product>
+@{
+    int count = 0;
+}
+<div class="container-fluid d-flex justify-content-between">
+    <div>Manage/Admin Page</div>
+    <a asp-action="create" asp-controller="product" class="btn btn-primary">Create product </a>
+
+</div>
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">NO</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].Name)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].Desc)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].Cost)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].Code)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].Size)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].IsNew)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].IsBestSeller)</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].IsFeatured)</th>
+
+
+
+
+
+                <th scope="col">Controls</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+
+                count++;
+                <tr>
+                    <td scope="row">@count</td>
+                    <td scope="col">@Html.DisplayFor(model=>product.Name)</td>
+                    <td scope="col">@Html.DisplayFor(model=>product.Desc)</td>
+                    <td scope="col">@Html.DisplayFor(model=>product.Cost)</td>
+                    <td scope="col">@Html.DisplayFor(model=>product.Code)</td>
+                    <td scope="col">@Html.DisplayFor(model=>product.Size)</td>
+                    <td scope="col">@Html.DisplayFor(model=>product.IsNew)</td>
+                    <td scope="col">@Html.DisplayFor(model=>product.IsBestSeller)</td>
+                    <td scope="col">@Html.DisplayFor(model=>product.IsFeatured)</td>
+
+
+
+
+                    <td style="max-width:200px">
+                        <a asp-action="update" style="width:35%" asp-controller="product" asp-route-id="@product.Id" class="    btn btn-success">Update</a>
+                        <a asp-action="delete" style="width:35%" asp-controller="product" asp-route-id="@product.Id" class="  btn-delete-slide btn btn-danger">Delete</a>
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<script src="~/assets/js/sweet.js"></script>

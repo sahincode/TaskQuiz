@@ -1,0 +1,42 @@
+﻿@model List<Color>
+@{
+    int count = 0;
+}
+<div class="container-fluid d-flex justify-content-between">
+    <div>Manage/Admin Page</div>
+    <a asp-action="create" asp-controller="color" class="btn btn-primary">Create color </a>
+
+</div>
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">NO</th>
+                <th scope="col">@Html.DisplayNameFor(model=>model[0].Name)</th>
+                
+                <th scope="col">Controls</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var color in Model)
+            {
+
+                count++;
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@Html.DisplayFor(a => color.Name)</td>
+                   
+                    
+                    <td style="max-width:200px">
+                        <a asp-action="update" style="width:35%" asp-controller="color" asp-route-id="@color.Id" class="btn btn-success">Update</a>
+                        <a asp-action="delete" style="width:35%" asp-controller="color" asp-route-id="@color.Id" class="btn btn-danger">Delete</a>
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
