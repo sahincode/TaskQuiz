@@ -24,7 +24,7 @@ namespace TaskPronia.Controllers
                 ProductsIsFeatured = _context.Products.Where(p => p.IsFeatured == true).ToList(),
 
                 ProductsISNew = _context.Products.Where(p => p.IsNew == true).ToList()
-            }
+            };
             return View(model);
         }
 
